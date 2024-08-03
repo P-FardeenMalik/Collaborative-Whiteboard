@@ -23,7 +23,7 @@ A real-time collaborative whiteboard application built using Node.js, Express, a
    https://github.com/P-FardeenMalik/Collaborative-Whiteboard.git
 2. Navigate to the project directory:
    ```bash
-   cd collaborative-whiteboard
+   cd Collaborative-Whiteboard
 3. Install dependencies:
    ```bash
    npm install
