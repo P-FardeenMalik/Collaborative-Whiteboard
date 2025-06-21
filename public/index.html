@@ -12,7 +12,17 @@
         <h1>Collaborative Whiteboard</h1>
         <canvas id="canvas"></canvas>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js" integrity="sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // Only load Socket.IO for local development
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            const script = document.createElement('script');
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js";
+            script.integrity = "sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ==";
+            script.crossOrigin = "anonymous";
+            script.referrerPolicy = "no-referrer";
+            document.head.appendChild(script);
+        }
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
