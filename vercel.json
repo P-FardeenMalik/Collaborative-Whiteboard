@@ -6,18 +6,29 @@
       "use": "@vercel/node"
     },
     {
+      "src": "api/drawing.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "public/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/index.js"
+      "src": "/api/drawing",
+      "dest": "/api/drawing.js"
     },
     {
+      "src": "/api/(.*)",
+      "dest": "/index.js"
+    },    {
       "src": "/script.js",
       "dest": "/public/script.js"
+    },
+    {
+      "src": "/script-multi.js",
+      "dest": "/public/script-multi.js"
     },
     {
       "src": "/styles.css",
