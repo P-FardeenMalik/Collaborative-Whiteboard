@@ -14,6 +14,19 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
+// Quick access routes
+app.get("/single", (req, res) => {
+    res.redirect("/?mode=single");
+});
+
+app.get("/multi", (req, res) => {
+    res.redirect("/?mode=multi");
+});
+
+app.get("/collaborate", (req, res) => {
+    res.redirect("/?mode=multi");
+});
+
 // For Vercel deployment
 if (process.env.NODE_ENV !== 'production') {
     let httpserver = require("http").createServer(app);
